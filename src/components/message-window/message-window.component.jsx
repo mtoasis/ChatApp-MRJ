@@ -24,7 +24,7 @@ class MessageWindow extends React.Component{
     }
 
     initializing = async () => {
-        const { data } = await axios.get('/init')
+        const { data } = await axios.get('http://chatapp-mrj.herokuapp.com/init')
         this.setState({chatHistory: data, test:data})
         this.scrollToBottom()
         this.receiveMessage()                 

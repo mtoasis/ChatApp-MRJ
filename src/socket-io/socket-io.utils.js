@@ -1,6 +1,6 @@
 import io from 'socket.io-client'
 
-export const socket = io(':80', {
+export const socket = io('http://chatapp-mrj.herokuapp.com:80', {
     secure: true,
     rejectUnauthorized: false,
 })

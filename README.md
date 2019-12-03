@@ -1,10 +1,21 @@
-# ChatApp
-* Framework: React.js 
-* Library:Socket.io./ Redux / Material-ui
-* Database:MongoDB
-* Server: Express.js
+# ChatApp - MRJ
+
+## Introduction
+..* Use this application to chat with random people around the world.
+..* User can send a message or Gif images to the chat room.
 
 
-[Live Link](http://chatapp-mrj.herokuapp.com)
+## Frontend
+⋅⋅*Framework: React v16.12.0
+⋅⋅*Library: Redux
 
+## Backend
+⋅⋅*Engine: Node.js
+⋅⋅*Server: Express.js
+
+## Database
+⋅⋅*MongoDB
+
+## Deployment
+⋅⋅* Heroku
 
