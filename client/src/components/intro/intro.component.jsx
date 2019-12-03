@@ -11,11 +11,11 @@ const Intro = () => {
         <IntroContainer>
             <LogoContainer>
                 <Logo />
-            </LogoContainer>
+            </LogoContainer>            
             <UserNameModal />
-            <h3>
+            <h4>
                 Please set your username to start
-            </h3>
+            </h4>
         </IntroContainer>
     )
 }

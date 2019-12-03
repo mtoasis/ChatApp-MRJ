@@ -7,10 +7,6 @@ align-items:center;
 
     form{
         width:100%
-
-        input{
-            width:85%
-        }
     }
     
 `

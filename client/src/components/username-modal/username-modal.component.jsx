@@ -1,9 +1,11 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState} from 'react'
 import { connect } from 'react-redux'
 import FormInput from '../form-input/form-input.component'
 import {createStructuredSelector} from 'reselect'
 import {selectCurrentuser, selectUserId} from '../../redux/user/user.selectors'
 import { changeUserNameStart } from '../../redux/user/user.actions'
+import {UsernameModalConatiner} from './username-modal.styles'
+import CustomButton from '../custom-button/custom-button.component'
 
 
 const UserNameModal = ({userId, currentUsername, setModalDisplay, changeUserNameStart }) => {
@@ -33,7 +35,7 @@ const UserNameModal = ({userId, currentUsername, setModalDisplay, changeUserName
     }
 
     return (
-        <Fragment>
+        <UsernameModalConatiner>
             <form onSubmit={handleSubmit}>
                 <FormInput
                     type="text"
@@ -43,9 +45,9 @@ const UserNameModal = ({userId, currentUsername, setModalDisplay, changeUserName
                     name="username"
                     required
                 />
-                <button type="submit" style={{ cursor: 'pointer' }}>OK</button>
+                <CustomButton type="submit" style={{ cursor: 'pointer' }}>OK</CustomButton>
             </form>
-        </Fragment>
+        </UsernameModalConatiner>
     )
 }
 

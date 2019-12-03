@@ -1,8 +1,9 @@
 import React, { useState, Fragment } from 'react'
-import { ModalButtonContainer, ModalContainer, ModalHeaderContainer } from './modal.styles'
+import { ModalButtonContainer, ModalContainer, ModalHeaderContainer, CloseButtonContainer } from './modal.styles'
 import UserNameModal from '../username-modal/username-modal.component'
 import GifModal from '../gif-modal/gif-modal.component'
-import UserListModal from '../user-list-modal/user-list-modal.component'
+import UserList from '../user-list/user-list.component'
+
 
 const Modal = ({ changeUserNameStart, isUserNameModal, isGifModal, isUserListModal, size, title, ...props }) => {
 
@@ -15,9 +16,9 @@ const Modal = ({ changeUserNameStart, isUserNameModal, isGifModal, isUserListMod
                     
                     <ModalHeaderContainer>
                         <h3>{title}</h3>
-                        <span onClick={() => setModalDisplay(false)}>
+                        <CloseButtonContainer onClick={() => setModalDisplay(false)}>
                             &#10005;
-                        </span>
+                        </CloseButtonContainer>
                     </ModalHeaderContainer>
 
                     {isUserNameModal ?
@@ -29,7 +30,7 @@ const Modal = ({ changeUserNameStart, isUserNameModal, isGifModal, isUserListMod
                         setModalDisplay={setModalDisplay}
                     /> : null}
 
-                    {isUserListModal ? <UserListModal
+                    {isUserListModal ? <UserList
                         setModalDisplay={setModalDisplay}
                     /> : null}
 

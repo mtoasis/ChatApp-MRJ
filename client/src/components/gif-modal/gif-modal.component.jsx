@@ -8,6 +8,7 @@ import { selectUserId, selectCurrentuser } from '../../redux/user/user.selectors
 import { selectCurrentGif } from '../../redux/gif/gif.selector'
 import { getGifStart } from '../../redux/gif/gif.action'
 import { sendNewMessageStart } from '../../redux/chat/chat.actions'
+import CustomButton from '../custom-button/custom-button.component'
 
 
 const GifModal = ({currentUser, userId, getGifStart, gifData, sendNewMessageStart, setModalDisplay }) => {
@@ -59,7 +60,7 @@ const GifModal = ({currentUser, userId, getGifStart, gifData, sendNewMessageStar
                     onChange={handleChange}
                     required
                 />
-                <button type="submit" stlye={{ cursor: 'pointer' }}>Search</button>
+                <CustomButton type="submit" stlye={{ cursor: 'pointer' }}>Search</CustomButton>
             </form>
         </Fragment>
     )

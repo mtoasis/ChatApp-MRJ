@@ -27,7 +27,6 @@ export const FormInputContainer = styled.input`
     border: none;
     border-radius: 0;
     border-bottom: 1px solid ${subColor};
-    margin: 25px 0;
 
     &:focus {
       outline: none;

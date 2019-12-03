@@ -38,6 +38,7 @@ class MessageWindow extends React.Component{
         })        
     }
 
+
     render(){        
         const {chatHistory} = this.state;
         return (

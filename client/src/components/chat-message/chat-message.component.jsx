@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 import {
   UserNameContainer,
   ChatMessageContainer,
   MessageContainer,
-  GifImageContainer,
-  SystemMessageContainer
+  SystemMessageContainer,
+  InnerMessageContainer
 } from "./chat-message.styles";
 
 import { connect } from 'react-redux'
@@ -20,28 +20,27 @@ const ChatMessage = ({ allchats: { from, msg, url, userId }, ownUserId }) => (
     {from === "Main Server" ?
       <SystemMessageContainer>{msg}</SystemMessageContainer>
       :
-      <Fragment>
-        <UserNameContainer>
+      <InnerMessageContainer>
+        <UserNameContainer
+          userId={userId}
+          ownUserId={ownUserId}
+        >
           <span>
             {from.slice(0, 10)} {from.length > 10 ? `..` : null}
           </span>
         </UserNameContainer>
-
-        <Fragment>
+        <br />
+        <MessageContainer
+          userId={userId}
+          ownUserId={ownUserId}
+        >
           {url ?
-            <GifImageContainer>
-              <img alt="gif" src={url} />
-            </GifImageContainer>
+            <img alt="gif" src={url} />
             :
-            <MessageContainer
-              userId={userId}
-              ownUserId={ownUserId}
-            >
-              <span>{msg}</span>
-            </MessageContainer>
+            <span>{msg}</span>
           }
-        </Fragment>
-      </Fragment>
+        </MessageContainer>
+      </InnerMessageContainer>
     }
 
 

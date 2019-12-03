@@ -22,13 +22,13 @@ class SocketHidden extends React.Component {
         const { initializeUserIdStart } = this.props;
         const self = this;
         socket.on('userId', ({ userId }) => {
-            console.log(`userId is ...${self.state.isUserId}`)
+            // console.log(`userId is ...${self.state.isUserId}`)
             if (!self.state.isUserId) {
                 self.setState({isUserId:true})
                 initializeUserIdStart(userId)                
             }
             else{
-                console.log("userId exists")
+                // console.log("userId exists")
             }
         })
     }

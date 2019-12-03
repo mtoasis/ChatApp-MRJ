@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const IntroContainer = styled.div`
+    padding:15px;
     display:flex;
     flex-direction:column;
     background-color:#4DA3E5;
@@ -9,8 +10,12 @@ export const IntroContainer = styled.div`
     margin: auto;
     justify-content:center;
 
-    h3{
+    h4{
         color:white;
+    }
+
+    input{
+        margin: 25px 0; 
     }
 `
 
